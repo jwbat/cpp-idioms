@@ -13,8 +13,11 @@ void nl(int n = 1) { for (size_t i{ 0 }; i < n; ++i) cout << "\n"; }
 void tab(int n = 1) { for (size_t i{ 0 }; i < n; ++i) cout << "\t"; }
 template <typename T> void print(T x) { cout << x; }
 
+
 void print_tuple(tuple<char, int, int>& t) {
-    cout << get<0>(t) << get<1>(t) << get<2>(t);
+    cout << '(' << get<0>(t) << ", " 
+                << get<1>(t) << ", "
+                << get<2>(t) << ')';
 }
 
 int main() {
