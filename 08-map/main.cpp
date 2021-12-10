@@ -21,7 +21,6 @@ int main() {
 void map_insert(map<int, string>& m, int i, string s) {
     if (auto [it, inserted] = m.insert({ i, s }); inserted) {
         cout << boolalpha 
-             << "\n\t inserted = " << setw(10) << inserted
              << "\n\t key      = " << setw(10) << it->first
              << "\n\t value    = " << setw(10) << it->second
              << "\n\n";
