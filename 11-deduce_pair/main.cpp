@@ -1,8 +1,7 @@
 #include <iostream>
-#include <iomanip>
 #include <string>
 
-using std::cout; using std::setw; using std::string;
+using std::cout; using std::string; using std::pair;
 
 namespace std
 {
@@ -19,9 +18,9 @@ auto print = [] (auto const& p) { cout << "\n\t(" << p.first << ", " << p.second
 
 int main()
 {
-    std::pair p1{ 1, "A" };
-    std::pair p2{ "A", 1 };
-    std::pair p3{ "A", "B" };
+    pair p1{ 9, "A" };
+    pair p2{ "A", 9 };
+    pair p3{ "A", "B" };
 
     print(p1);
     print(p2);
