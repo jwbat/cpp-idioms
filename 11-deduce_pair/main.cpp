@@ -14,7 +14,7 @@ namespace std
     pair(const char*, const char*)->pair<string, string>;
 }
 
-auto print = [] (auto const& p) { cout << "\n\t(" << p.first << ", " << p.second <<  ")\n"; };
+auto print = [] (auto const& p) { cout << "\n\t(" << p.first << ", " << p.second << ")\n"; };
 
 int main()
 {
@@ -29,3 +29,4 @@ int main()
     cout << "\n";
     return 0;
 }
+
