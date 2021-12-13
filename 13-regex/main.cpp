@@ -8,16 +8,18 @@ using namespace std::string_literals; using std::boolalpha;
 using std::regex; using std::regex_constants::icase; using std::regex_match;
 
 // match valid email addresses
-auto pattern {R"(^[A-Z0-9.%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$)"s};
-auto rx = regex{ pattern, icase };
+
+bool is_valid_email_format(const string& email)
+{
+    auto pattern {R"(^[A-Z0-9.%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$)"s};
+    auto rx = regex{ pattern, icase };
+    return regex_match(email, rx);
+}
 
 int main()
 {
-
-    auto valid = regex_match("jwb@domain.com", rx);
-
     cout << boolalpha
-         << "\n\t valid:  " << valid
+         << "\n   email is valid:  " << is_valid_email_format("jwb@domain.com")
          << "\n\n";
 
     return 0;
