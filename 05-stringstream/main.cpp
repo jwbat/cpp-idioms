@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <string>
 #include <sstream>
+#include <vector>
 
 using std::cout; using std::setw; using std::string; using std::stringstream;
 void nl(int n = 1) { for (size_t i{ 0 }; i < n; ++i) cout << "\n"; }
@@ -23,4 +24,13 @@ int main() {
     stringstream(s2) >> x;
     nl(2); tab(2); print(x); nl(2);
     return 0;
+    //.............................................................
+
+    string s = "11 15 19 23";
+    stringstream iss( s );
+
+    vector<int> xs;
+    int number;
+    while ( iss >> number )
+      xs.push_back(number);
 }
