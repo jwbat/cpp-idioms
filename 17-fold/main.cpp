@@ -17,8 +17,8 @@ constexpr auto mult = [] (const auto a, const auto b) { return a * b; };
 int main()
 {
     vector<int> v{ 4, 5, 20 };
-    int sum = foldl(mult, v, 1);        // 400
-    cout << "\n\t" << sum << "\n\n";
+    int product = foldl(mult, v, 1);        // 400
+    cout << "\n\t" << product << "\n\n";
 
     return 0;
 }
