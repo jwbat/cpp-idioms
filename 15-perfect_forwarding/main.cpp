@@ -2,16 +2,16 @@
 
 using std::cout; using std::forward;
 
-template <typename ...T>
-void g(T&& ... args)
+template <typename... Ts>
+void g(Ts&& ... args)
 {
     (cout << ... << args);
 }
 
-template <typename ...T>
-void f(T&& ...args)
+template <typename ...Ts>
+void f(Ts&& ...args)
 {
-    g(forward<T>(args)...);
+    g(forward<Ts>(args)...);
 }
 
 int main()
