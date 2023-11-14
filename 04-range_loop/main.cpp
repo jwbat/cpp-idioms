@@ -4,7 +4,8 @@
 
 using std::cout; using std::setw; using std::vector;
 
-vector<int> get() {
+vector<int> get() 
+{
     return vector<int>{ 1, 1, 2, 3, 5 };
 }
  
